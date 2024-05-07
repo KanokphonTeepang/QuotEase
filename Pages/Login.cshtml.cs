@@ -36,6 +36,7 @@ namespace QuotEase.Pages
             return Page();
         }
 
+
     }
 }
 
