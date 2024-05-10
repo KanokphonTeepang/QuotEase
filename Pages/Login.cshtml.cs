@@ -25,7 +25,7 @@ namespace QuotEase.Pages
 
         public IActionResult OnPost()
         {
-            if (Username == "example" && Password == "password")
+            if (Username == "example" && Password == "1234")
             {
                 // Add logic here for a successful login
                 return RedirectToPage("/Home");
