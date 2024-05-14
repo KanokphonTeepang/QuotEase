@@ -61,3 +61,120 @@ body {
     .btn-login:hover {
         background-color: #452a59;
     }
+
+
+.navbar-nav .ml-auto {
+    margin-left: auto;
+}
+
+.nav-link.text-danger {
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 6px 25px; /* ปรับขนาดของปุ่มตามต้องการ */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 350px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #6D5593;
+    font-size: 25px;
+    font-family: Poppins;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.popup-body {
+    width: 100%;
+    padding: 20px;
+    color: #5B5858;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.popup-footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #6D5593;
+    font-size: 20px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+.input-container {
+    width: 280px;
+    height: 40px;
+    position: relative;
+    background: white;
+    border-radius: 22px;
+    border: 1px #533D7B solid;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+    .input-container input {
+        width: calc(100% - 38px); /* Adjusting width to leave space for the icon */
+        height: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #ACACAC;
+        padding-left: 14px; /* Reduced padding-left to move text closer to the left */
+        line-height: 40px;
+    }
+
+    .input-container img {
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+    }
+
+

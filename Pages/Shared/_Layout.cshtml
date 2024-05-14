@@ -12,7 +12,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">QuotEase</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="~/image/tab.png" alt="Your Logo" />
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,9 +24,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Home">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/MyFiles">My Files</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Product
@@ -40,10 +44,65 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/About">About us</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy Policy</a>
                         </li>
+
+                        <li class="nav-item dropdown ml-auto">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                English
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-page="/">ภาษาไทย</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="#" onclick="openLogoutPopup()">Log out</a>
+
+                            <div id="Logoutpopup" class="popup">
+                                <div class="popup-content">
+                                    <span class="close-btn" onclick="closeLogoutPopup()">×</span>
+                                    <div style="width: 600px; height: 350px; position: relative">
+                                        <div style="width: 600px; height: 350px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08); border-radius: 10px; border: 1px solid"></div>
+                                        <div style="width: 251.26px; height: 73.80px; left: 145px; top: 90px; position: absolute; padding: 10px;">
+                                            <div style="width: 450px; height: 21.09px; left: -63px; top: 52.71px; position: absolute; text-align: center; color: #533D7B; font-size: 20px; font-family: Poppins; font-weight: 300; word-wrap: break-word; margin-bottom: 20px;">You will be returned to the login page.</div>
+                                            <div style="width: 300px; height: 21.09px; left: 4.88px; top: 31.63px; position: absolute; text-align: center; color: #533D7B; font-size: 20px; font-family: Poppins; font-weight: 300; word-wrap: break-word; margin-bottom: 20px;">Are you sure you want to log out?</div>
+                                            <div style="width: 200px; height: 31.63px; left: 54px; top: 0px; position: absolute; text-align: center; color: #533D7B; font-size: 26px; font-family: Poppins; font-weight: 700; word-wrap: break-word; margin-bottom: 20px;">Log out</div>
+
+                                        </div>
+                                        <div style="width: 165px; height: 32.80px; left: 300.68px; top: 190px; position: absolute; margin-bottom: 20px;">
+                                            <button style="width: 100%; height: 100%; background: none; border: none; cursor: pointer; color: #FF4A4A; font-size: 20px; font-family: Poppins; font-weight: 600; text-align: center; padding: 5px; display: flex; justify-content: center; align-items: center; border: 1px solid #FF4A4A; border-radius: 22px;" onclick="logout()">Log out</button>
+                                        </div>
+                                        <div style="width: 165px; height: 32.80px; left: 130px; top: 190px; position: absolute; margin-bottom: 20px;">
+                                            <button style="width: 100%; height: 100%; background: none; border: none; cursor: pointer; color: #533D7B; font-size: 20px; font-family: Poppins; font-weight: 600; text-align: center; padding: 5px; display: flex; justify-content: center; align-items: center; border: 1px solid #533D7B; border-radius: 22px;" onclick="closeLogoutPopup()">Cancel</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <script>
+                            function openLogoutPopup() {
+                                document.getElementById("Logoutpopup").style.display = "block";
+                            }
+
+                            function closeLogoutPopup() {
+                                document.getElementById("Logoutpopup").style.display = "none";
+                            }
+
+                            function logout() {
+                                window.location.href = "/Login";
+                            }
+                        </script>
+
+
+
+
+
                     </ul>
+
                 </div>
             </div>
         </nav>
